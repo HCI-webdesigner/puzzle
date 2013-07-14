@@ -8,25 +8,6 @@ function allFunc(){
 
 //开始时的说明
 function showHint(){
-	//获取窗口大小
-	var winWidth = 0;
-	var wnHeight = 0;
-	if(window.innerWidth){
-		winWidth = window.innerWidth;
-	}
-	else if ((document.body) && (document.body.clientWidth)){
-		winWidth = document.body.clientWidth;
-	}
-	if(window.innerHeight){
-		winHeight = window.innerHeight;
-	}
-	else if ((document.body) && (document.body.clientHeight)){
-		winHeight = document.body.clientHeight;
-	}
-	//弹出遮罩层
-	var hint = document.getElementById("hint");
-	hint.style.width = winWidth+"px";
-	hint.style.height = winHeight+"px";
 	//关闭遮罩层
 	var close = document.getElementById("close-hint");
 	close.onclick = function(){
@@ -112,6 +93,8 @@ function counter(){
 		container.innerHTML = tk+':'+tj+':'+ti;
 		if(done){
 			clearInterval(start);
+			container.style.background = "#f00";
+			stop = 1;
 			success.style.display = "block";
 		}
 	}
@@ -144,10 +127,11 @@ function counter(){
 		}
 		initialize(3);
 		i=0,j=0,k=0;
-		if(done){
-			success.style.display = "none";
-			start = setInterval(startCount,10);
-		}
+		start = setInterval(startCount,10);
+		container.style.background = "#0f0";
+		curtain.style.display = "none";
+		success.style.display = "none";
+		stop = 0;
 	}
 }
 function addZero(num){
@@ -193,8 +177,6 @@ function initialize(m){
 		var	result="";
 		for(i=0;i<m;i++){
 			for(j=0;j<m;j++){
-				//document.getElementById('d'+n).style.backgroundPosition=parseInt(-i*100) + "px "+ parseInt(-j*100) +"px";
-				//arr.push("<div id='d"+n+" class='ch' style='background-position:"+parseInt(-i*100) + 'px '+ parseInt(-j*100) +"px'"+">dgfdhgdf</div>")
 				arr.push("<div id='slice"+n+"'  class='dz"+n+"'  draggable='true' ondragstart='drag(event)' style='background-position:"+parseInt(-j*130) + 'px '+ parseInt(-i*130) +"px'"+"></div>");
 				n++;
 			}
