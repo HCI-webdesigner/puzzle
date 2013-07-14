@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzle Game!</title>
+	<link href="favicon.ico" type="image/x-icon" rel=icon/>
+	<link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+	<link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+
+	<div id="header">
+		<div id="logo">
+			&nbsp;
+			<span id="P">P</span>
+			<span id="U">U</span>
+			<span id="Z1">Z</span>
+			<span id="Z2">Z</span>
+			<span id="L">L</span>
+			<span id="E1">E</span>&nbsp;
+			<span id="G">G</span>
+			<span id="A">A</span>
+			<span id="M">M</span>
+			<span id="E2">E</span>
+			<span id="em">!</span>
+			&nbsp;
+		</div>
+		<div id="time"></div>
+		<div id="settings">
+			<div id="restart" onclick="restart()"></div>
+			<div id="sound" onclick="musicControl()"></div>
+			<audio src="img/bg.mp3" autoplay id="sound-file"></audio>
+		</div>
+	</div>
+
+	<div id="watch-panel">
+		<div id="top1"></div>
+		<div id="top2"></div>
+		<div id="watch">
+			<div id="counter">00:00:00</div>
+		</div>
+	</div>
+
+	<div id="puzzle">
+		<div id="dz0" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz1" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz2" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz3" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz4" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz5" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz6" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz7" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<div id="dz8" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	</div>
+	
+	<div id="dock-outer">
+		<div id="dock">
+			<div id="left-arrow" class="arrow"></div>
+			<div id="right-arrow" class="arrow"></div>
+			<div id="dock-inner">
+			<div id="slice-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="hint">
+		<div id="hint-msg">
+			<br>
+			这是一个无聊的游戏。。。<br>
+			拖进去放好，你就赢了。。<br>
+			p.s.点击秒表可以暂停哦！
+		</div>
+		<div id="close-hint">Start!</div>
+	</div>
+	<div id="pause">
+		<div id="pause-icon">
+			<div id="pause-icon-inner"></div>
+		</div>
+	</div>
+	<div id="success">
+		Holy high!!!!!<br>
+		你成功了!!!!!!
+	</div>
+
+	<script type="text/javascript" src="puzzle.js"></script>
+</body>
+</html>
