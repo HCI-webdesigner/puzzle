@@ -127,6 +127,7 @@ function counter(){
 		}
 		initialize(3);
 		i=0,j=0,k=0;
+		clearInterval(start);
 		start = setInterval(startCount,10);
 		container.style.background = "#0f0";
 		curtain.style.display = "none";
