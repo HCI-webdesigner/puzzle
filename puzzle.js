@@ -99,13 +99,13 @@ function counter(){
 		}
 	}
 	watchpanel.onclick = function(){
-		if(stop){
+		if(stop&&!done){
 			start = setInterval(startCount,10);
 			container.style.background = "#0f0";
 			curtain.style.display = "none";
 			stop = 0;
 		}
-		else{
+		else if(!stop){
 			clearInterval(start);
 			container.style.background = "#f00";
 			curtain.style.display = "block";
