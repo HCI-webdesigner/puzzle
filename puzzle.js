@@ -53,20 +53,26 @@ var num = 3
 		var r = document.getElementById("right-arrow");
 		var target = document.getElementById("dock-inner");
 		r.onclick = function() {
-				var interL = setInterval(function() {
-				target.scrollLeft += 5;
-				if (target.scrollLeft >= 900) {
+			var i=0;
+			var interL = setInterval(function() {
+				target.scrollLeft += 3;
+				i++;
+				if (i >= 200) {
 					clearInterval(interL);
+					i=0;
 				}
-			}, 1);
+			}, 5);
 		};
 		l.onclick = function() {
+			var i=0;
 			var interR = setInterval(function() {
-				target.scrollLeft -= 5;
-				if (target.scrollLeft <= 0) {
+				target.scrollLeft -= 3;
+				i++;
+				if ( i>= 200) {
 					clearInterval(interR);
+					i=0;
 				}
-			}, 1);
+			}, 5);
 		};
 	}
 
@@ -187,18 +193,21 @@ var num = 3
 	//切图
 
 	function initialize(m) {
+		var puzzle = document.getElementById("puzzle");
+		var container = document.getElementById("slice-container");
+		container.style.width = 390*m+"px";
 		if (m == 3) {
-			document.getElementById("puzzle").style.width = "402px";
-			document.getElementById("puzzle").style.height = "402px";
-			document.getElementById("slice-container").style.paddingTop = "0px";
+			puzzle.style.width = "402px";
+			puzzle.style.height = "402px";
+			container.style.paddingTop = "0px";
 		} else if (m == 4) {
-			document.getElementById("puzzle").style.width = "405px";
-			document.getElementById("puzzle").style.height = "405px";
-			document.getElementById("slice-container").style.paddingTop = "20px";
+			puzzle.style.width = "405px";
+			puzzle.style.height = "405px";
+			container.style.paddingTop = "20px";
 		}else if(m==5){
-			document.getElementById("puzzle").style.width = "408px";
-			document.getElementById("puzzle").style.height = "408px";
-			document.getElementById("slice-container").style.paddingTop = "25px";
+			puzzle.style.width = "408px";
+			puzzle.style.height = "408px";
+			container.style.paddingTop = "25px";
 		}
 		var n = 0;
 		var arr = new Array();

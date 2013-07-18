@@ -90,16 +90,18 @@ body{
 	border-radius: 5px;
 	background: none repeat scroll 0% 0% rgb(255, 255, 0);
 	border: 3px dotted rgb(255, 51, 0);
-	color: rgb(0,0,0);
+	color: rgb(255,0,0);
 	font-family: "Microsoft YaHei";
 	font-size: 15px;
 }
 
 #restart{
+	float: left;
 	background: url(img/restart.png);
 }
 
 #sound{
+	float: left;
 	background: url(img/music.png);
 }
 
