@@ -6,15 +6,14 @@ var num = 3
 		initialize(num);
 		clickToScroll();
 	}
-	// 设置难度
 
+	// 设置难度
 	function setDifficulty() {
 		num = document.getElementById("difficulty").value;
 		document.getElementById("restart").click();
 	}
 
 	//开始时的说明
-
 	function showHint() {
 		//关闭遮罩层
 		var close = document.getElementById("close-hint");
@@ -33,7 +32,6 @@ var num = 3
 	}
 
 	//控制音乐
-
 	function musicControl() {
 		var music = document.getElementById("sound-file");
 		var button = document.getElementById("sound");
@@ -47,7 +45,6 @@ var num = 3
 	}
 
 	//点击箭头横滚
-
 	function clickToScroll() {
 		var l = document.getElementById("left-arrow");
 		var r = document.getElementById("right-arrow");
@@ -77,7 +74,6 @@ var num = 3
 	}
 
 	//秒表
-
 	function counter() {
 		var i = 0,
 			j = 0,
@@ -165,7 +161,6 @@ var num = 3
 	}
 
 	//拖放
-
 	function allowDrop(ev) {
 		ev.preventDefault();
 	}
@@ -191,7 +186,6 @@ var num = 3
 	}
 
 	//切图
-
 	function initialize(m) {
 		var puzzle = document.getElementById("puzzle");
 		var container = document.getElementById("slice-container");
@@ -235,7 +229,6 @@ var num = 3
 
 
 	//检查完成
-
 	function check(n) {
 		for (var i = 0; i < n; i++) {
 			var pre = document.getElementById("dz" + i);
