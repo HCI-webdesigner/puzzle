@@ -195,7 +195,7 @@ var num = 3
 	function initialize(m) {
 		var puzzle = document.getElementById("puzzle");
 		var container = document.getElementById("slice-container");
-		container.style.width = (390+30)*m+"px";
+		container.style.width = (390+40)*m+"px";
 		if (m == 3) {
 			puzzle.style.width = "402px";
 			puzzle.style.height = "402px";
