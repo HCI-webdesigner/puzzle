@@ -81,13 +81,13 @@ body{
 	margin-right: 10px;
 	cursor: pointer;
 }
-#difficulty{
+#difficulty,#images{
 	float: left;
 	height: 30px;
 	width: 70px;
 	margin:3px 10px 0px 0px;
 	cursor: pointer;
-	border-radius: 5px;
+	border-radius: 10px;
 	background: none repeat scroll 0% 0% rgb(255, 255, 0);
 	border: 3px dotted rgb(255, 51, 0);
 	color: rgb(255,0,0);
@@ -262,7 +262,6 @@ body{
 }
 
 .dz0, .dz1, .dz2, .dz3, .dz4, .dz5, .dz6, .dz7, .dz8, .dz9, .dz10, .dz11, .dz12, .dz13, .dz14, .dz15, .dz16, .dz17, .dz18, .dz19, .dz20, .dz21, .dz22, .dz23, .dz24{
-	background: url(img/hehe.jpg);
 	display: inline-block;
 	cursor: move;
 	margin-right: 7px;

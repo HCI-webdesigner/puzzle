@@ -1,12 +1,21 @@
 window.onload = allFunc;
-var num = 3
+var num = 3;
+var url = "url(img/hehe0.jpg)";
 
 	function allFunc() {
 		showHint();
 		initialize(num);
 		clickToScroll();
+		document.getElementById("difficulty").value = 3;
+		document.getElementById("images").value = 0;
 	}
 
+	// 选择图像
+	function setImages() {
+		var imag = document.getElementById("images").value;
+		url = "url(img/hehe" + imag + ".jpg)";
+		document.getElementById("restart").click();
+	}
 	// 设置难度
 	function setDifficulty() {
 		num = document.getElementById("difficulty").value;
@@ -209,7 +218,7 @@ var num = 3
 		var px = 390 / m;
 		for (var i = 0; i < m; i++) {
 			for (j = 0; j < m; j++) {
-				arr.push("<div id='slice" + n + "'  class='dz" + n + "'  draggable='true' ondragstart='drag(event)' style='width: " + px + "px;height: " + px + "px;background-position:" + parseInt(-j * px) + 'px ' + parseInt(-i * px) + "px'" + "></div>");
+				arr.push("<div id='slice" + n + "'  class='dz" + n + "'  draggable='true' ondragstart='drag(event)' style='width: " + px + "px;height: " + px + "px;background:" + parseInt(-j * px) + 'px ' + parseInt(-i * px) + "px " + url + "'></div>");
 				n++;
 			}
 		}
