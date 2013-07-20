@@ -3,11 +3,38 @@ var num = 3;
 var url = "url(img/hehe0.jpg)";
 
 	function allFunc() {
+		flashLogo();
 		showHint();
 		initialize(num);
 		clickToScroll();
 		document.getElementById("difficulty").value = 3;
 		document.getElementById("images").value = 0;
+	}
+
+	//logo闪烁
+	function flashLogo(){
+		var i=0,j=0;
+		var ele = getElementsByClass('logo','letter');
+		var color = ['#f06','#33b5e5','#00f','#0f0','#f00','#fff','#fa0','#f03','#0ef','#fc0','#f00'];
+		setInterval(function(){
+			for(i=0;i<ele.length;i++){
+				var random = Math.round(10 * Math.random());
+				ele[i].style.color = color[random];
+			}
+		},1000);
+	}
+
+	function getElementsByClass(outer,inner){
+		var i=0;
+		var result = [];
+		var container = document.getElementById(outer);
+		var allIn = container.getElementsByTagName('*');
+		for(i=0;i<allIn.length;i++){
+			if(allIn[i].className == inner){
+				result.push(allIn[i]);
+			}
+		}
+		return result;
 	}
 
 	// 选择图像
