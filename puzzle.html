@@ -38,48 +38,53 @@
 			</select>
 			<div id="restart" onclick="restart()"></div>
 			<div id="sound" onclick="musicControl()"></div>
-			 <audio src="img/bg.mp3" autoplay loop id="sound-file"></audio>
-	</div>
-</div>
-
-<div id="watch-panel">
-	<div id="top1"></div>
-	<div id="top2"></div>
-	<div id="watch">
-		<div id="counter">00:00:00</div>
-	</div>
-</div>
-
-<div id="puzzle"></div>
-
-<div id="dock-outer">
-	<div id="dock">
-		<div id="left-arrow" class="arrow"></div>
-		<div id="right-arrow" class="arrow"></div>
-		<div id="dock-inner">
-			<div id="slice-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<audio src="img/bg.mp3" autoplay loop id="sound-file"></audio>
 		</div>
 	</div>
-</div>
 
-<div id="hint">
-	<div id="hint-msg">
-		<br>
-		这是一个无聊的游戏。。。
-		<br>
-		拖进去放好，你就赢了。。
-		<br>p.s.点击秒表可以暂停哦！</div>
-	<div id="close-hint">Start!</div>
-</div>
-<div id="pause">
-	<div id="pause-icon">
-		<div id="pause-icon-inner"></div>
+	<div id="watch-panel">
+		<div id="top1"></div>
+		<div id="top2"></div>
+		<div id="watch">
+			<div id="counter">00:00:00</div>
+		</div>
 	</div>
-</div>
-<div id="success">
-	Holly high!!!!
-	<br>你成功了!!!!!!</div>
+	<div id="answer">
+		<div id="pole1"></div>
+		<div id="pole2"></div>
+		<img src="img/hehe0.jpg">
+		<span id="button" onclick="showAnswer()"><em id="tri"></em></span>
+	</div>
+	<div id="puzzle"></div>
 
-<script type="text/javascript" src="puzzle.js"></script>
+	<div id="dock-outer">
+		<div id="dock">
+			<div id="left-arrow" class="arrow"></div>
+			<div id="right-arrow" class="arrow"></div>
+			<div id="dock-inner">
+				<div id="slice-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="hint">
+		<div id="hint-msg">
+			<br>
+			这是一个无聊的游戏。。。
+			<br>
+			拖进去放好，你就赢了。。
+			<br>p.s.点击秒表可以暂停哦！</div>
+		<div id="close-hint">Start!</div>
+	</div>
+	<div id="pause">
+		<div id="pause-icon">
+			<div id="pause-icon-inner"></div>
+		</div>
+	</div>
+	<div id="success">
+		Holly high!!!!
+		<br>你成功了!!!!!!</div>
+
+	<script type="text/javascript" src="puzzle.js"></script>
 </body>
 </html>

@@ -140,6 +140,70 @@ body{
 	font-family: Tahoma;
 }
 
+#answer{
+	position: absolute;
+	left: -320px;
+	top: 50%;
+	z-index: 5px;
+	margin-top: -230px;
+	width: 350px;
+	height: 300px;
+}
+
+#pole1,#pole2{
+	position: absolute;
+	z-index: -2;
+	width: 30px;
+	height: 30px;
+	background: #d90;
+	-webkit-box-shadow: 1px 3px 5px #000 ;
+	-moz-box-shadow: 1px 3px 5px #000;
+	-o-box-shadow: 1px 3px 5px #000;
+	box-shadow: 1px 3px 5px #000;
+}
+#pole1{
+	top: 80px;
+}
+#pole2{
+	top: 190px;
+}
+
+#answer img{
+	margin-left: 20px;
+	width: 290px;
+	height: 290px;
+	float: left;
+	border-color:#d90;
+	border-style:solid;
+	border-radius: 5px;
+	border-width: 5px;
+}
+#answer span{
+	float: left;
+	display: block;
+	width: 20px;
+	height: 100px;
+	background:rgb(255, 170, 34);
+	margin-top:100px;
+	border-radius: 0px 20px 20px 0px;
+	cursor: pointer;
+}
+#tri{
+	position: absolute;
+	top: 139px;
+	right: 6px;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	border-width: 10px 10px 10px 10px;
+	border-style: dashed dashed dashed solid;
+	border-color: transparent transparent transparent rgb(230, 20, 20);
+}
+#answer span:hover{
+	height: 200px;
+	margin-top:50px;
+}
+
 #puzzle{
 	width: 402px;
 	height: 402px;

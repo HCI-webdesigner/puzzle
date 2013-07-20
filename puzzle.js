@@ -9,6 +9,40 @@ var url = "url(img/hehe0.jpg)";
 		clickToScroll();
 		document.getElementById("difficulty").value = 3;
 		document.getElementById("images").value = 0;
+		document.getElementById("answer").style.left="-320px";
+	}
+
+	//查看原图
+	function showAnswer(){
+		var answer=document.getElementById("answer");
+		var tri=document.getElementById("tri");
+		var lef = parseInt(answer.style.left);
+		if(lef==-320){ 
+			tri.style.borderStyle="dashed solid dashed dashed";
+			tri.style.borderColor="transparent rgb(230, 20, 20) transparent transparent";
+			tri.style.right="16px";
+			var ans=setInterval(function(){
+				if(lef<0){
+					lef+=10;
+					answer.style.left=lef+'px';
+				}else{
+					clearInterval(ans);
+				}
+			},10);
+		}
+		if(lef==0){
+			tri.style.borderStyle="dashed dashed dashed solid";
+			tri.style.borderColor="transparent transparent transparent rgb(230, 20, 20)";
+			tri.style.right="6px";
+			var ans=setInterval(function(){
+				if(lef>-320){
+					lef-=10;
+					answer.style.left=lef+'px';
+				}else{
+					clearInterval(ans);
+				}
+			},10);
+		}
 	}
 
 	//logo闪烁
@@ -41,6 +75,8 @@ var url = "url(img/hehe0.jpg)";
 	function setImages() {
 		var imag = document.getElementById("images").value;
 		url = "url(img/hehe" + imag + ".jpg)";
+		var src=url.slice(4,17);
+		answer.getElementsByTagName("img")[0].src=src;
 		document.getElementById("restart").click();
 	}
 	// 设置难度
