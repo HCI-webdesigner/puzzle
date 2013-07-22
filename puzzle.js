@@ -124,9 +124,9 @@ var url = "url(img/hehe0.jpg)";
 		r.onclick = function() {
 			var i=0;
 			var interL = setInterval(function() {
-				target.scrollLeft += 3;
+				target.scrollLeft += 10;
 				i++;
-				if (i >= 200) {
+				if (i >= 30) {
 					clearInterval(interL);
 					i=0;
 				}
@@ -135,9 +135,9 @@ var url = "url(img/hehe0.jpg)";
 		l.onclick = function() {
 			var i=0;
 			var interR = setInterval(function() {
-				target.scrollLeft -= 3;
+				target.scrollLeft -= 10;
 				i++;
-				if ( i>= 200) {
+				if ( i>= 30) {
 					clearInterval(interR);
 					i=0;
 				}
