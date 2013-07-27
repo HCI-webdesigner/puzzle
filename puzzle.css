@@ -36,24 +36,11 @@ body{
 	color: #f00;
 }
 
-#settings{
-	height: 35px;
-	margin: 3px 20px 0;
-	float: right;
-}
-
-#settings div{
-	width: 35px;
-	height: 35px;
-	margin-right: 10px;
-	cursor: pointer;
-}
-
 #difficulty,#images{
-	float: left;
 	height: 30px;
 	width: 70px;
-	margin:3px 10px 0px 0px;
+	position: absolute;
+	top: 5px;
 	cursor: pointer;
 	border-radius: 10px;
 	background: #ff0;
@@ -63,14 +50,28 @@ body{
 	font-weight: bolder;
 	font-size: 15px;
 }
+#difficulty{
+	right: 100px;
+}
+#images{
+	right: 180px;
+}
+
+#restart,#sound{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 3px;
+	cursor: pointer;
+}
 
 #restart{
-	float: left;
+	right: 52px;
 	background: url(img/restart.png);
 }
 
 #sound{
-	float: left;
+	right: 10px;
 	background: url(img/music.png);
 }
 

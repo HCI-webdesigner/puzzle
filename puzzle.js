@@ -248,12 +248,14 @@ var url = "url(img/hehe0.jpg)";
 		var targetBox = document.getElementById(targetId);
 		var targetChild = targetBox.getElementsByTagName("div");
 		var parent = targetBox.parentNode;
-		if (targetId == "slice-container") {
+		if (targetId == "slice-container" || targetBox.className == "drop-zone") {
 			ev.target.appendChild(document.getElementById(data));
-		} else if (targetChild.length != 0 || parent.className == "drop-zone") {
-			// alert("这里已经有一块拼图了哦～～");
-		} else {
-			ev.target.appendChild(document.getElementById(data));
+		}
+		else if (targetChild.length != 0 || parent.className == "drop-zone"){
+			alert("这里已经有一块拼图了哦～～");
+		}
+		else{
+			document.getElementById('slice-container').appendChild(document.getElementById(data));
 		}
 	}
 
