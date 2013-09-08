@@ -1,47 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Puzzle Game!</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>A Simple Puzzle Game!</title>
 	<link href="favicon.ico" type="image/x-icon" rel=icon/>
 	<link href="favicon.ico" type="image/x-icon" rel="shortcut icon"/>
 	<link rel="stylesheet" href="puzzle.css"></head>
 <body>
-
-	<div id="header">
-		<div id="logo">
-			&nbsp;
-			<span class="letter">P</span>
-			<span class="letter">U</span>
-			<span class="letter">Z</span>
-			<span class="letter">Z</span>
-			<span class="letter">L</span>
-			<span class="letter">E</span>
-			&nbsp;
-			<span class="letter">G</span>
-			<span class="letter">A</span>
-			<span class="letter">M</span>
-			<span class="letter">E</span>
-			<span class="letter">!</span>
-			&nbsp;
-		</div>
-		<div id="settings">
-			<select id="images" onchange="setImages()">
-				<option value="0">图1</option>
-				<option value="1">图2</option>
-				<option value="2">图3</option>
-			</select>
-			<select id="difficulty" onchange="setDifficulty()">
-				<option value="3">简单</option>
-				<option value="4">一般</option>
-				<option value="5">困难</option>
-			</select>
-			<div id="restart" onclick="restart()"></div>
-			<div id="sound" onclick="musicControl()"></div>
-			<audio src="img/bg.mp3" autoplay loop id="sound-file"></audio>
+	<div id="bg">
+		<!--  -->
+		<div id="header">
+			<div id="logo">
+				&nbsp;
+				<span class="letter">P</span>
+				<span class="letter">U</span>
+				<span class="letter">Z</span>
+				<span class="letter">Z</span>
+				<span class="letter">L</span>
+				<span class="letter">E</span>
+				&nbsp;
+				<span class="letter">G</span>
+				<span class="letter">A</span>
+				<span class="letter">M</span>
+				<span class="letter">E</span>
+				<span class="letter">!</span>
+				&nbsp;
+			</div>
+			<div id="settings">
+				<select id="images" onchange="setImages()">
+					<option value="0">图1</option>
+					<option value="1">图2</option>
+					<option value="2">图3</option>
+				</select>
+				<select id="difficulty" onchange="setDifficulty()">
+					<option value="3">简单</option>
+					<option value="4">一般</option>
+					<option value="5">困难</option>
+				</select>
+				<div id="restart" onclick="restart()"></div>
+				<div id="sound" onclick="musicControl()"></div>
+				 <audio src="img/bg.mp3" autoplay loop id="sound-file"></audio>		
 		</div>
 	</div>
-
+	<!--  -->
 	<div id="watch-panel">
 		<div id="top1"></div>
 		<div id="top2"></div>
@@ -49,14 +50,17 @@
 			<div id="counter">00:00:00</div>
 		</div>
 	</div>
+	<!--  -->
 	<div id="answer">
 		<div id="pole1"></div>
 		<div id="pole2"></div>
 		<img src="img/hehe0.jpg">
-		<span id="button" onclick="showAnswer()"><em id="tri"></em></span>
+		<span id="button" onclick="showAnswer()"> <em id="tri"></em>
+		</span>
 	</div>
+	<!--  -->
 	<div id="puzzle"></div>
-
+	<!--  -->
 	<div id="dock-outer">
 		<div id="dock">
 			<div id="left-arrow" class="arrow"></div>
@@ -66,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-
+	<!--  -->
 	<div id="hint">
 		<div id="hint-msg">
 			<br>
@@ -76,15 +80,17 @@
 			<br>p.s.点击秒表可以暂停哦！</div>
 		<div id="close-hint">Start!</div>
 	</div>
+	<!--  -->
 	<div id="pause">
 		<div id="pause-icon">
 			<div id="pause-icon-inner"></div>
 		</div>
 	</div>
+	<!--  -->
 	<div id="success">
 		Holly high!!!!
 		<br>你成功了!!!!!!</div>
-
-	<script type="text/javascript" src="puzzle.js"></script>
+</div>
+<script type="text/javascript" src="puzzle.js"></script>
 </body>
 </html>
